@@ -17,18 +17,13 @@ class Solution {
 
         int i = 0, j = 0;
 
-        // Alternate positive and negative
         while (i < pos.size() && j < neg.size()) {
             ans.add(pos.get(i++));
             ans.add(neg.get(j++));
         }
-
-        // Add remaining positive numbers
         while (i < pos.size()) {
             ans.add(pos.get(i++));
         }
-
-        // Add remaining negative numbers
         while (j < neg.size()) {
             ans.add(neg.get(j++));
         }
