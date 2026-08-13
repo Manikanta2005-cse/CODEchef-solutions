@@ -30,7 +30,7 @@ Explanation: Positive numbers in order are 2, 1, and negative numbers are -3, -4
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-13T17:06:06.943Z  
+**Submitted:** 2026-08-13T17:07:01.109Z  
 
 ```java
 import java.util.ArrayList;
@@ -52,18 +52,13 @@ class Solution {
 
         int i = 0, j = 0;
 
-        // Alternate positive and negative
         while (i < pos.size() && j < neg.size()) {
             ans.add(pos.get(i++));
             ans.add(neg.get(j++));
         }
-
-        // Add remaining positive numbers
         while (i < pos.size()) {
             ans.add(pos.get(i++));
         }
-
-        // Add remaining negative numbers
         while (j < neg.size()) {
             ans.add(neg.get(j++));
         }
