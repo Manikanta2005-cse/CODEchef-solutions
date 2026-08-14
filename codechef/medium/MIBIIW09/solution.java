@@ -1,27 +1,31 @@
-interface Notifier {
-    void sendNotification(String message);
+// Define the Drawable interface
+interface Drawable {
+    // Declare a method 'draw()' to draw shapes
+    void draw();
 }
 
-class EmailNotifier implements Notifier {
-    @Override
-    public void sendNotification(String message) {
-        System.out.println("Sending Email: " + message);
+class Circle implements Drawable {
+    // Override the draw method for Circle
+    public void draw() {
+        System.out.println("Drawing a circle");
     }
+    
 }
 
-class SMSNotifier implements Notifier {
-    @Override
-    public void sendNotification(String message) {
-        System.out.println("Sending SMS: " + message);
+class Square implements Drawable {
+    // Override the draw method for Square
+    public void draw() {
+        System.out.println("Drawing a square");
     }
+    
 }
 
 class Codechef {
     public static void main(String[] args) {
-        Notifier email = new EmailNotifier();
-        Notifier sms = new SMSNotifier();
-
-        email.sendNotification("Your order has been shipped");
-        sms.sendNotification("Your OTP is 456789");
+        Drawable circle = new Circle();
+        Drawable square = new Square();
+        // Call the draw method on both shapes
+        circle.draw();
+        square.draw();
     }
 }
