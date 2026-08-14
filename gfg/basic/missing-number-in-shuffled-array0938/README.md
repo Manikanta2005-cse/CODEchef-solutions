@@ -31,21 +31,29 @@ arr2.size() = arr1.size() - 1
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-14T17:38:24.645Z  
+**Submitted:** 2026-08-14T17:39:49.337Z  
 
 ```java
+import java.util.HashMap;
+
 class Solution {
     public int findMissing(int[] arr1, int[] arr2) {
-        int missing = 0;
+        HashMap<Integer, Integer> map = new HashMap<>();
 
         for (int num : arr1) {
-            missing ^= num;
+            map.put(num, map.getOrDefault(num, 0) + 1);
         }
 
         for (int num : arr2) {
-            missing ^= num;
+            map.put(num, map.get(num) - 1);
         }
-        return missing;
+        for (int key : map.keySet()) {
+            if (map.get(key) > 0) {
+                return key;
+            }
+        }
+
+        return -1;
     }
 }
 ```
