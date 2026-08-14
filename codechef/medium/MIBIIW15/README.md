@@ -4,32 +4,55 @@
 
 ## Problem
 
-### Music Instrument Sounds
-- Imagine a music system where different instruments either produce sound or need to be tuned. Some instruments, like guitars, can produce sound when played, while others, like violins, require tuning before playing.
-- You are asked to implement a system that uses an abstract class and an interface to model these behaviors. This exercise helps demonstrate the core differences between abstract classes (which can have constructors and abstract methods) and interfaces (which define capabilities to be implemented by other classes).
+### Multiple Choice Question
 
- **Task** 
-
-- Define an abstract class Instrument: It should have a field name. Use a constructor to initialize the name of the instrument. Declare an abstract method playSound().
-- Define an interface Tunable: It should declare a method tune().
-- In the main() method: Call playSound() on the guitar and tune() on the violin.
-
- **Expected Output:** 
+What will be the output of the following Java code?
 
 ```
-Strum
-Tuning the violin by adjusting its strings
+interface Flyable {
+    void fly();
+}
+
+abstract class Bird {
+    abstract void makeSound();
+    
+    void layEggs() {
+        System.out.println("Laying eggs...");
+    }
+}
+
+class Sparrow extends Bird implements Flyable {
+    @Override
+    public void fly() {
+        System.out.println("Sparrow is flying");
+    }
+
+    @Override
+    public void makeSound() {
+        System.out.println("Chirp chirp");
+    }
+}
+
+class Codechef {
+    public static void main(String[] args) {
+        Flyable obj = new Sparrow();
+        obj.fly();
+        // obj.makeSound();  // Line X
+    }
+}
 
 ```
+
+ **What happens if Line X is uncommented?**
 
 ## Solution
 
-**Language:** Java  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-14T17:15:07.322Z  
+**Submitted:** 2026-08-14T17:15:25.246Z  
 
-```java
+```cpp
 // Define an abstract class 'Instrument' with a constructor to initialize the name of the instrument 
 // and an abstract method 'playSound'
 abstract class Instrument {
