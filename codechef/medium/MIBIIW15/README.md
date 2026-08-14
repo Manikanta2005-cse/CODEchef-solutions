@@ -50,7 +50,7 @@ class Codechef {
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-14T17:15:25.246Z  
+**Submitted:** 2026-08-14T17:15:44.236Z  
 
 ```cpp
 // Define an abstract class 'Instrument' with a constructor to initialize the name of the instrument 
