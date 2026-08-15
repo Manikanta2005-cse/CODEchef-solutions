@@ -1,39 +1,51 @@
-class Inventory {
-    private int stock;
+class BankAccount {
+    private double balance;
 
-    public Inventory(int initialStock) {
-        if (initialStock < 0) {
-            throw new IllegalArgumentException("Initial stock cannot be negative.");
+    public BankAccount(double initialBalance) {
+        if (initialBalance < 0) {
+            throw new IllegalArgumentException("Initial balance cannot be negative.");
         }
-        this.stock = initialStock;
+        this.balance = initialBalance;
     }
 
-    public void sell(int quantity) {
-        if (quantity < 0) {
-            throw new IllegalArgumentException("Quantity cannot be negative.");
+    public void deposit(double amount) {
+        if (amount < 0) {
+            throw new IllegalArgumentException("Deposit amount cannot be negative.");
         }
-        if (quantity > stock) {
-            throw new IllegalArgumentException("Insufficient stock.");
-        }
-        stock -= quantity;
+        this.balance += amount;
     }
 
-    public int getStock() {
-        return stock;
+    public void withdraw(double amount) {
+        if (amount < 0) {
+            throw new IllegalArgumentException("Withdrawal amount cannot be negative.");
+        }
+        if (amount > balance) {
+            throw new IllegalArgumentException("Insufficient balance.");
+        }
+        balance -= amount;
+    }
+
+    public double getBalance() {
+        return balance;
     }
 }
 
 public class Main {
     public static void main(String[] args) {
+        BankAccount account = new BankAccount(100.0);
+
+        // Fill in the exception handling blocks
         try {
-            Inventory inventory = new Inventory(50);
-            inventory.sell(20);
-            System.out.println("Remaining stock: " + inventory.getStock());
-            inventory.sell(100);
-        } catch (IllegalArgumentException e) {
+            account.withdraw(30.0);
+            System.out.println("Remaining balance: " + account.getBalance());
+
+            account.withdraw(150.0);  // This may throw an exception
+            System.out.println("Remaining balance: " + account.getBalance()); // May not be reached
+        } catch(IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());
         } finally {
-            System.out.println("Transaction completed.");
+            System.out.println("Transaction processing complete.");
         }
     }
 }
+
