@@ -51,7 +51,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-15T15:54:13.521Z  
+**Submitted:** 2026-08-15T16:02:30.849Z  
 
 ```java
 import java.util.*;
@@ -59,28 +59,30 @@ import java.lang.*;
 import java.io.*;
 
 class Codechef {
-    public static void main (String[] args) throws java.lang.Exception {
+    public static void main(String[] args) throws java.lang.Exception {
         Scanner sc = new Scanner(System.in);
-        
-        if (!sc.hasNextInt()) return;
         int t = sc.nextInt();
         
         while (t-- > 0) {
             int n = sc.nextInt();
             int[] arr = new int[n];
             
-            Map<Integer, Integer> freqMap = new HashMap<>();
-            
             for (int i = 0; i < n; i++) {
                 arr[i] = sc.nextInt();
-                freqMap.put(arr[i], freqMap.getOrDefault(arr[i], 0) + 1);
             }
+            
+            // Brute force: nested loops to count frequency of each element
             for (int i = 0; i < n; i++) {
-                System.out.print(freqMap.get(arr[i]) + " ");
+                int count = 0;
+                for (int j = 0; j < n; j++) {
+                    if (arr[i] == arr[j]) {
+                        count++;
+                    }
+                }
+                System.out.print(count + " ");
             }
             System.out.println();
         }
-        
         sc.close();
     }
 }
