@@ -1,36 +1,24 @@
-class InvalidEmployeeIdException extends Exception {
-    public InvalidEmployeeIdException(String message) {
+// Create custom exception class WeakPasswordException here 
+class WeakPasswordException extends Exception {
+    public WeakPasswordException(String message){
         super(message);
     }
 }
 
-class Employee {
-    private String employeeId;
 
-    public Employee(String employeeId) throws InvalidEmployeeIdException {
-        if (!isValidEmployeeId(employeeId)) {
-            throw new InvalidEmployeeIdException("Invalid Employee ID format. Must be EMP-NNNN");
-        }
-        this.employeeId = employeeId;
-    }
 
-    private boolean isValidEmployeeId(String employeeId) {
-        return employeeId.matches("EMP-\\d{4}");
-    }
 
-    public String getEmployeeId() {
-        return employeeId;
-    }
-
+public class Main {
     public static void main(String[] args) {
-        try {
-            Employee employee1 = new Employee("EMP-1234");
-            System.out.println("Employee 1 ID: " + employee1.getEmployeeId());
+        String password = "12345";
 
-            Employee employee2 = new Employee("EMP-ABCD"); // Invalid format
-            System.out.println("Employee 2 ID: " + employee2.getEmployeeId()); // This line won't be executed if the exception is thrown
-        } catch (InvalidEmployeeIdException e) {
-            System.out.println("Exception caught: " + e.getMessage());
+        try {
+            if (password.length() < 6) {
+                throw new WeakPasswordException("Password is too short. Minimum 6 characters required.");
+            }
+            System.out.println("Password accepted.");
+        } catch (WeakPasswordException e) {
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }
