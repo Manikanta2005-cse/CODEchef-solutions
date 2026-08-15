@@ -4,52 +4,55 @@
 
 ## Problem
 
-_Description not available._
+### Employee ID Validation with Custom Exception
+
+Practice one more problem on creating a new extended  **Exception class**  to hammer it home. You are given a Java program that checks the strength of a `password`. If the `password` is too short (less than 6 characters), it should throw a custom exception named `WeakPasswordException`. The main program and logic for password checking are already written.
+
+ **Task to Perform:** 
+
+- Create a custom exception class named WeakPasswordException by extending the Exception class.
+- Add a constructor to this class that accepts a String message and passes it to the superclass (Exception) using super(message).
+
+ **Output format:** 
+
+```
+Error: Password is too short. Minimum 6 characters required.
+
+```
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-15T16:35:32.900Z  
+**Submitted:** 2026-08-15T16:37:22.843Z  
 
 ```java
-class InvalidEmployeeIdException extends Exception {
-    public InvalidEmployeeIdException(String message) {
+// Create custom exception class WeakPasswordException here 
+class WeakPasswordException extends Exception {
+    public WeakPasswordException(String message){
         super(message);
     }
 }
 
-class Employee {
-    private String employeeId;
 
-    public Employee(String employeeId) throws InvalidEmployeeIdException {
-        if (!isValidEmployeeId(employeeId)) {
-            throw new InvalidEmployeeIdException("Invalid Employee ID format. Must be EMP-NNNN");
-        }
-        this.employeeId = employeeId;
-    }
 
-    private boolean isValidEmployeeId(String employeeId) {
-        return employeeId.matches("EMP-\\d{4}");
-    }
 
-    public String getEmployeeId() {
-        return employeeId;
-    }
-
+public class Main {
     public static void main(String[] args) {
-        try {
-            Employee employee1 = new Employee("EMP-1234");
-            System.out.println("Employee 1 ID: " + employee1.getEmployeeId());
+        String password = "12345";
 
-            Employee employee2 = new Employee("EMP-ABCD"); // Invalid format
-            System.out.println("Employee 2 ID: " + employee2.getEmployeeId()); // This line won't be executed if the exception is thrown
-        } catch (InvalidEmployeeIdException e) {
-            System.out.println("Exception caught: " + e.getMessage());
+        try {
+            if (password.length() < 6) {
+                throw new WeakPasswordException("Password is too short. Minimum 6 characters required.");
+            }
+            System.out.println("Password accepted.");
+        } catch (WeakPasswordException e) {
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }
+
 ```
 
 ---
