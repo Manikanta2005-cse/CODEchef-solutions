@@ -1,0 +1,28 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+class Solution {
+    public String firstNonRepeating(String s) {
+        int[] freq = new int[26];
+        Queue<Character> q = new LinkedList<>();
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            freq[ch - 'a']++;
+            q.add(ch);
+
+            while (!q.isEmpty() && freq[q.peek() - 'a'] > 1) {
+                q.poll();
+            }
+
+            if (q.isEmpty()) {
+                result.append('#');
+            } else {
+                result.append(q.peek());
+            }
+        }
+
+        return result.toString();
+    }
+}
