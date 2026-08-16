@@ -1,23 +1,20 @@
 import java.util.ArrayList;
 
-class EvenSum {
+class WrapperExample {
     public static void main(String[] args) {
+        // 1. Create an ArrayList of Integer objects (Autoboxing)
         ArrayList<Integer> numbers = new ArrayList<>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
-        numbers.add(4);
-        numbers.add(5);
-        numbers.add(6);
+        numbers.add(10); // Autoboxing: int 10 becomes Integer object
+        numbers.add(20); // Autoboxing: int 20 becomes Integer object
+        numbers.add(30); // Autoboxing: int 30 becomes Integer object
 
+        // 2. Iterate through the ArrayList and calculate the sum (Unboxing)
         int sum = 0;
-        // Iterate through the ArrayList and calculate the sum of even numbers
-        for (Integer number : numbers) {
-            if (number % 2 == 0) {
-                sum += number;
-            }
+        for (int i = 0; i < numbers.size(); i++) {
+            sum += numbers.get(i); // Unboxing: Integer object is converted to int for addition
         }
 
-        System.out.println("The sum of even numbers is: " + sum);
+        // 3. Print the sum
+        System.out.println("The sum of the numbers is: " + sum);
     }
 }
