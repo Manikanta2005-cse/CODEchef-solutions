@@ -4,44 +4,48 @@
 
 ## Problem
 
-_Description not available._
+### Student Attendance Tracker
+
+You are developing a simple attendance tracker using Java. Your task is to store and retrieve the attendance count for students in the first three weeks of class using an `ArrayList`.
+
+```
+Week1=28, Week2=30, Week3=27
+
+```
+
+ **Expected Output:** 
+
+```
+Attendance in Week 1: 28
+Attendance in Week 3: 27
+
+```
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-16T16:55:37.602Z  
+**Submitted:** 2026-08-16T16:56:08.732Z  
 
 ```java
 import java.util.ArrayList;
 
 class Codechef {
+
     public static void main(String[] args) {
-        // Step 1: Declare and initialize an ArrayList for main expenses (Rent, Groceries, Utilities, Travel, Others)
-        // Hint: Use Double as the data type
-        ArrayList<Double> expenses = new ArrayList<>();
-        expenses.add(2000.50);  // Rent
-        expenses.add(1500.75);  // Groceries
-        expenses.add(800.25);  // Utilities
-        expenses.add(1200.00);  // Travel
-        expenses.add(500.00);  // Others
+        
+        int Week1=28, Week2=30, Week3=27;
+        ArrayList<Integer> attendanceList = new ArrayList<>();
 
-        // Step 2: Print Rent and Grocery expenses
-        System.out.println("Rent Expense: " + expenses.get(0));
-        System.out.println("Grocery Expense: " + expenses.get(1));
+        // Step 2: Add attendance for 3 weeks
+        attendanceList.add(Week1); // Week 1
+        attendanceList.add(Week2); // Week 2
+        attendanceList.add(Week3); // Week 3
 
-        // Step 3: Declare and initialize an ArrayList for new expenses (Internet, Gym, Subscriptions)
-        ArrayList<Double> newExpenses = new ArrayList<>();
-
-        // Step 4: Add values to the new expenses list
-        newExpenses.add(100.00);  // Internet Bill
-        newExpenses.add(150.00);  // Gym Membership
-        newExpenses.add(75.50);  // Subscriptions
-
-        // Step 5: Print Internet and Gym Membership expenses
-        System.out.println("Internet Bill: " + newExpenses.get(0));
-        System.out.println("Gym Membership: " + newExpenses.get(1));
+        // Step 3: Access and print attendance using .get() method
+        System.out.println("Attendance in Week 1: " + attendanceList.get(0));
+        System.out.println("Attendance in Week 3: " + attendanceList.get(2));
     }
 }
 ```
