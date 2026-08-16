@@ -4,26 +4,34 @@
 
 ## Problem
 
-### Worked Example - Calling Methods Using an Object
+### Output of Method Without Return Type
 
-In this example, the program defines two methods: one that prints a message to the console and another that also prints a message to the console.
-
- **Expected Output:** 
+What will be the output of the following code, which demonstrates the syntax of methods without parameters and return types?
 
 ```
-Hello, welcome to Java!  
-Welcome to the world of Java!  
+public class Codechef {
+
+    // Static method without parameters and return type
+    public static void printMessage() {
+        System.out.println("Hello, World!");  // Method without parameters and return type
+    }
+
+    public static void main(String[] args) {
+        // Calling the static method directly
+        printMessage();  // Calling the method without parameters and return type
+    }
+}
 
 ```
 
 ## Solution
 
-**Language:** Java  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-16T17:23:33.659Z  
+**Submitted:** 2026-08-16T17:23:50.128Z  
 
-```java
+```cpp
 class Codechef {
     // Static method without parameters and return type
     public static void printMessage() {
