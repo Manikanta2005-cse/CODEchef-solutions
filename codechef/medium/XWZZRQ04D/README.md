@@ -4,54 +4,40 @@
 
 ## Problem
 
-### Worked Example - Iterating ArrayList with For Loop
+### MCQ - Find the output
 
-In this example, we demonstrate how to take input of numbers from the user and print only the numbers that are even.
-
-### Sample 1:
-Input
-Output
+What will be the output of the following Java program if the user enters the values: 5 10 15 20 25?
 
 ```
-22
-23
-24
-25
-26
-```
+import java.util.ArrayList;
+import java.util.Scanner;
 
-```
-Even numbers from input:
-22
-24
-26
-```
+class Codechef {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Integer> arr = new ArrayList<>();
 
-### Sample 2:
-Input
-Output
+        // Taking 5 inputs from user
+        for (int i = 0; i < 5; i++) {
+            arr.add(sc.nextInt());
+        }
 
-```
-23
-25
-27
-29
-31
-```
+        System.out.println(arr.get(2) + 5);
 
-```
-Even numbers from input:
+        sc.close();
+    }
+}
 
 ```
 
 ## Solution
 
-**Language:** Java  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-16T17:02:08.307Z  
+**Submitted:** 2026-08-16T17:02:46.723Z  
 
-```java
+```cpp
 import java.util.ArrayList;
 import java.util.Scanner;
 
