@@ -16,7 +16,7 @@ Okay, let's deepen your understanding of  **iterating**  through  **collections*
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-16T10:38:19.417Z  
+**Submitted:** 2026-08-16T10:38:37.583Z  
 
 ```java
 import java.util.ArrayList;
