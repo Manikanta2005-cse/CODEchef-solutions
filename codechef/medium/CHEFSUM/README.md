@@ -79,38 +79,30 @@ The minimum value of the function is 8, which is achieved for indices 2 and 4. T
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-20T16:04:30.150Z  
+**Submitted:** 2026-08-20T16:06:40.856Z  
 
 ```java
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.IOException;
-import java.util.StringTokenizer;
+import java.util.Scanner;
+import java.util.HashSet;
 
 class Codechef {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        if (!sc.hasNextInt()) return;
         
-        if (!st.hasMoreTokens()) return;
-        int t = Integer.parseInt(st.nextToken());
+        int t = sc.nextInt();
         
         while (t-- > 0) {
-            while (st == null || !st.hasMoreTokens()) {
-                String line = br.readLine();
-                if (line == null) break;
-                st = new StringTokenizer(line);
-            }
-            int n = Integer.parseInt(st.nextToken());
+            int n = sc.nextInt();
             
+            HashSet<Integer> seenValues = new HashSet<>();
             int minIndex = 1;
             int minValue = Integer.MAX_VALUE;
             
             for (int i = 1; i <= n; i++) {
-                while (!st.hasMoreTokens()) {
-                    st = new StringTokenizer(br.readLine());
-                }
-                int val = Integer.parseInt(st.nextToken());
+                int val = sc.nextInt();
+                seenValues.add(val);
+                
                 if (val < minValue) {
                     minValue = val;
                     minIndex = i;
