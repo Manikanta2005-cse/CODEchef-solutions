@@ -1,15 +1,29 @@
 import java.util.Scanner;
 
-class Codechef {
-    public static void main(String[] args) throws java.lang.Exception {
-        Scanner sc = new Scanner(System.in);
-        if (sc.hasNextInt()) {
-            int n = sc.nextInt();
-            long sum = 0;
-            for (int i = 0; i < n; i++) {
-                sum += sc.nextInt();
-                System.out.print(sum + (i == n - 1 ? "" : " "));
-            }
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // your code goes here
+        int len = scanner.nextInt();
+        int[] arr = new int[len];
+        for (int i = 0; i < len; i++) {
+            int num = scanner.nextInt();
+            arr[i] = num;
         }
+        
+        int[] pre = new int[len];
+        for (int i = 0; i < len; i++) {
+            if (i != 0) {
+                pre[i] += pre[i - 1];
+            }
+            pre[i] += arr[i];
+        }
+        
+        for (int e : pre) {
+            System.out.print(e + " ");
+        }
+        System.out.println();
+        
+        scanner.close();
     }
 }
