@@ -30,7 +30,7 @@ Explanation: Only the first element 5 is such that all preceding elements (none 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-14T17:28:01.236Z  
+**Submitted:** 2026-08-22T15:56:40.804Z  
 
 ```java
 class Solution {
@@ -38,17 +38,14 @@ class Solution {
         if (arr == null || arr.length == 0) {
             return 0;
         }
-
-        int count = 0;
-        int maxSoFar = Integer.MIN_VALUE;
-
-        for (int num : arr) {
-            if (num > maxSoFar) {
+        int count = 1;
+        int maxSoFar = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > maxSoFar) {
                 count++;
-                maxSoFar = num;
+                maxSoFar = arr[i];
             }
         }
-
         return count;
     }
 }
