@@ -3,17 +3,14 @@ class Solution {
         if (arr == null || arr.length == 0) {
             return 0;
         }
-
-        int count = 0;
-        int maxSoFar = Integer.MIN_VALUE;
-
-        for (int num : arr) {
-            if (num > maxSoFar) {
+        int count = 1;
+        int maxSoFar = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > maxSoFar) {
                 count++;
-                maxSoFar = num;
+                maxSoFar = arr[i];
             }
         }
-
         return count;
     }
 }
