@@ -2,23 +2,34 @@ import java.util.Scanner;
 
 class Codechef {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        int len = scanner.nextInt();
         
-        if (!sc.hasNextInt()) return;
-        int n = sc.nextInt();
-        
-        long[] pref = new long[n + 1];
-        for (int i = 1; i <= n; i++) {
-            pref[i] = pref[i - 1] + sc.nextLong();
+        int[] ar = new int[len];
+        for (int i = 0; i < len; i++) {
+            ar[i] = scanner.nextInt();
         }
-        
-        if (!sc.hasNextInt()) return;
-        int k = sc.nextInt();
-        
-        for (int i = 0; i < k; i++) {
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            System.out.println(pref[b] - pref[a - 1]);
+
+        long[] pre = new long[len];
+        for (int i = 0; i < len; i++) {
+            if (i != 0) {
+                pre[i] += pre[i - 1];
+            }
+            pre[i] += ar[i];
         }
+
+        int q = scanner.nextInt();
+        while (q-- > 0) {
+            int n1 = scanner.nextInt();
+            int n2 = scanner.nextInt();
+            n1--;
+            n2--;
+            if (n1 == 0) {
+                System.out.println(pre[n2]);
+            } else {
+                System.out.println(pre[n2] - pre[n1 - 1]);
+            }
+        }
+        scanner.close();
     }
 }
