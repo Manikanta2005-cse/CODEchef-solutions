@@ -1,27 +1,37 @@
-//Update the code below
+//Solution as follows
 #include <stdio.h>
 #include <string.h>
 
 int main() {
     int t;
     scanf("%d", &t);
-    
-    while(t--) {
-        char S[100];
-        scanf("%s", S);
-        int A[strlen(S)];
-        
-        for(int i = 0; i < strlen(S); i++) {
-            // Converts a character into its ASCII value
-            A[i] = (int) S[i];
-        }
-        
-        for(int i = 0; i < strlen(S) ; i++) {
-            printf("%d ", A[i]);
-        }
-        
-        printf("\n");
-    }
 
+    while (t--) {
+        char A[100001], B[100001];
+        scanf("%s %s", A, B);
+        int n = strlen(A);
+        int i = 0;
+        //Flag is a very imporant tool in programming problems - you will come across various examples in later problems as well
+        int flag = 0;
+
+        while (i < n) {
+            // Checking A from left to right and B from right to left
+            if (A[i] == B[n - i - 1]) {
+                i++;
+            }
+            else {
+                // If specific character in A and B do not match, then they cannot be reverse
+                flag = 1;
+                break;
+            }
+        }
+
+        if (flag == 1) {
+            printf("No\n");
+        }
+        else {
+            printf("Yes\n");
+        }
+    }
     return 0;
 }
