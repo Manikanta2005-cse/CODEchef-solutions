@@ -4,16 +4,29 @@
 
 ## Problem
 
-_Description not available._
+### MCQ - 21
+
+What will be the output of this code, if the user enters `Chef`?
+
+```
+class Codechef {
+    public static void main(String[] args) {
+        Scanner read = new Scanner(System.in);
+        String s = read.nextLine();
+        System.out.println("Your name is: " + s);
+    }
+}
+
+```
 
 ## Solution
 
-**Language:** Java  
+**Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-04T15:21:36.649Z  
+**Submitted:** 2026-09-04T15:23:12.410Z  
 
-```java
+```cpp
 import java.util.Scanner;
 
 class Codechef
