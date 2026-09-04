@@ -4,9 +4,13 @@ class Codechef
 {
 	public static void main (String[] args)
 	{
-		// Solution as follows
+		// Update the blank in the code below
 		Scanner read = new Scanner(System.in);
-		int num = read.nextInt();
-		System.out.println(num * num);
+		int a = 35;
+		int b = 23;
+		int sum = a+b;
+		int diff = a-b;
+		System.out.println("Sum is: " + sum);
+		System.out.println("Difference is: " + diff);
 	}
 }
