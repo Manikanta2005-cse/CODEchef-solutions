@@ -13,25 +13,20 @@ int main() {
         char A[1005];
         char B[1005];
         
-        // Generate String A (replica of S)
         for (int i = 0; i < len; i++) {
             A[i] = S[i];
         }
-        A[len] = '\0'; // Add null terminator
-        
-        // Generate String B (reverse of S)
+        A[len] = '\0'; 
         for (int i = 0; i < len; i++) {
             B[i] = S[len - 1 - i];
         }
-        B[len] = '\0'; // Add null terminator
+        B[len] = '\0';
         
-        // Print String A
         for (int i = 0; i < len; i++) {
             printf("%c", A[i]);
         }
         printf("\n");
         
-        // Print String B
         for (int i = 0; i < len; i++) {
             printf("%c", B[i]);
         }
