@@ -33,12 +33,24 @@ s contains only alphabetic characters (both uppercase and lowercase).
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-04T14:34:59.009Z  
+**Submitted:** 2026-09-04T14:41:50.256Z  
 
 ```java
 class Solution {
     public static String reverseString(String s) {
-        return new StringBuilder(s).reverse().toString();
+        char[] arr = s.toCharArray();
+        int left = 0;
+        int right = arr.length - 1;
+
+        while (left < right) {
+            char temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            left++;
+            right--;
+        }
+
+        return new String(arr);
     }
 }
 ```
