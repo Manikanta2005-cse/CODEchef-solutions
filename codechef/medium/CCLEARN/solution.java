@@ -1,13 +1,15 @@
-import java.util.Scanner;
+import java.util.*;
+import java.lang.*;
+import java.io.*;
 
 class Codechef
 {
-	public static void main (String[] args)
+	public static void main (String[] args) throws java.lang.Exception
 	{
-		// Update the blank in the code given below
-		Scanner read = new Scanner(System.in);
-		int mile = read.nextInt();
-		double km = 1.60 * mile;
-		System.out.println(km);
+		// your code goes here
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int courses=2*n;
+System.out.println(courses);
 	}
 }
