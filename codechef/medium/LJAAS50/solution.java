@@ -2,15 +2,13 @@ import java.util.Scanner;
 
 class Codechef
 {
-	public static void main (String[] args)
+	public static void main (String[] args) 
 	{
-	   // Update the blank in code below
-		Scanner read = new Scanner(System.in);
-        int length = read.nextInt();
-        int width = read.nextInt();
+		// your code goes her
+		Scanner sc =new Scanner(System.in);
+		String a=sc.nextLine();
+		String b=sc.nextLine();
+		System.out.println(a+" "+b);
 
-        int area = length * width;
-
-        System.out.println("Area of the rectangle is: " + area);
 	}
 }
