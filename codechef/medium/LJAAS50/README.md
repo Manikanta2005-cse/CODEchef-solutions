@@ -4,25 +4,19 @@
 
 ## Problem
 
-Let us revisit our favourite rectangle and its area problem.
+Write a program that takes the two different strings as input and prints them in a single line separated by spaces.
 
-Write a program which does the following:
-
-- Declare 2 integer variables length and width.
-- In this problem - accept 2 user defined inputs from the console and initialise these values length and width.
-- Create another integer variable area - compute the area of the rectangle and store it as area.
-- Output area to the console.
 ### Sample 1:
 Input
 Output
 
 ```
-10
-23
+Code
+Chef
 ```
 
 ```
-Area of the rectangle is: 230
+Code Chef
 ```
 
 ## Solution
@@ -30,25 +24,24 @@ Area of the rectangle is: 230
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-04T15:28:29.591Z  
+**Submitted:** 2026-09-04T15:32:48.026Z  
 
 ```java
 import java.util.Scanner;
 
 class Codechef
 {
-	public static void main (String[] args)
+	public static void main (String[] args) 
 	{
-	   // Update the blank in code below
-		Scanner read = new Scanner(System.in);
-        int length = read.nextInt();
-        int width = read.nextInt();
+		// your code goes her
+		Scanner sc =new Scanner(System.in);
+		String a=sc.nextLine();
+		String b=sc.nextLine();
+		System.out.println(a+" "+b);
 
-        int area = length * width;
-
-        System.out.println("Area of the rectangle is: " + area);
 	}
 }
+
 ```
 
 ---
