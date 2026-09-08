@@ -32,7 +32,7 @@ Explanation: There is only one unique string with frequency 6. So answer for thi
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-07T16:25:57.722Z  
+**Submitted:** 2026-09-08T15:12:09.042Z  
 
 ```java
 import java.util.*;
