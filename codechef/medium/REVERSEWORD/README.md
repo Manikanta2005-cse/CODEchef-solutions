@@ -74,7 +74,7 @@ red are Roses
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-04T14:53:43.014Z  
+**Submitted:** 2026-09-08T15:15:25.204Z  
 
 ```java
 public static String reverseWords(String s) {
