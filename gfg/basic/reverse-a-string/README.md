@@ -33,7 +33,7 @@ s contains only alphabetic characters (both uppercase and lowercase).
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-04T14:41:50.256Z  
+**Submitted:** 2026-09-08T15:15:05.515Z  
 
 ```java
 class Solution {
