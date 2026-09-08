@@ -30,7 +30,7 @@ Explanation: Every word has the frequency of "1", so we return "this 1" as this 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-16T16:32:04.804Z  
+**Submitted:** 2026-09-08T15:14:53.485Z  
 
 ```java
 import java.util.HashMap;
