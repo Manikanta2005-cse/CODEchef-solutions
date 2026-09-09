@@ -1,30 +1,34 @@
-import java.util.Scanner;
+import java.util.*;
+import java.lang.*;
+import java.io.*;
 
 class Codechef {
-    public static void main(String[] args) throws java.lang.Exception {
+    public static void main (String[] args) throws java.lang.Exception {
         Scanner sc = new Scanner(System.in);
         if (!sc.hasNextInt()) return;
         int t = sc.nextInt();
         sc.nextLine();
+        
         while (t-- > 0) {
             String s = sc.nextLine();
             String[] words = s.split(" ");
-            StringBuilder sb = new StringBuilder();
+            StringBuilder result = new StringBuilder();
+            
             for (int i = 0; i < words.length; i++) {
                 String word = words[i];
                 if (isAcronym(word)) {
-                    sb.append(word);
+                    result.append(word);
                 } else {
-                    sb.append(Character.toUpperCase(word.charAt(0)));
+                    result.append(Character.toUpperCase(word.charAt(0)));
                     if (word.length() > 1) {
-                        sb.append(word.substring(1).toLowerCase());
+                        result.append(word.substring(1).toLowerCase());
                     }
                 }
                 if (i < words.length - 1) {
-                    sb.append(" ");
+                    result.append(" ");
                 }
             }
-            System.out.println(sb.toString());
+            System.out.println(result.toString());
         }
     }
 
