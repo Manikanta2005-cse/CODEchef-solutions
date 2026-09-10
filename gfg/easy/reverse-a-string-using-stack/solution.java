@@ -1,6 +1,7 @@
+import java.util.*;
 class Solution {
     public String reverse(String S) {
-        java.util.Stack<Character> stack = new java.util.Stack<>();
+        Stack<Character> stack = new Stack<>();
         for (int i = 0; i < S.length(); i++) {
             stack.push(S.charAt(i));
         }
