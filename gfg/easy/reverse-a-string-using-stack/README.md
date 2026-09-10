@@ -27,12 +27,13 @@ Output: keeG
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-10T15:36:24.538Z  
+**Submitted:** 2026-09-10T15:37:36.962Z  
 
 ```java
+import java.util.*;
 class Solution {
     public String reverse(String S) {
-        java.util.Stack<Character> stack = new java.util.Stack<>();
+        Stack<Character> stack = new Stack<>();
         for (int i = 0; i < S.length(); i++) {
             stack.push(S.charAt(i));
         }
