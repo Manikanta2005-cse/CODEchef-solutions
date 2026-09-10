@@ -49,8 +49,8 @@ Since an empty string reads the same forward and backward, it is a palindrome.
 
 **Language:** Java  
 **Runtime:** 2 ms (beats 99.31%)  
-**Memory:** 44.2 MB (beats 82.97%)  
-**Submitted:** 2026-09-08T15:26:44.224Z  
+**Memory:** 44.1 MB (beats 91.18%)  
+**Submitted:** 2026-09-10T15:42:28.196Z  
 
 ```java
 class Solution {
