@@ -7,8 +7,9 @@ class Solution {
             freq[S.charAt(i) - 'a']++;
         }
 
-        int left = 0, right = S.length() - 1;
-        boolean dir = true; 
+        int left = 0;
+        int right = S.length() - 1;
+        boolean dir = true;
         int removeCount = 0;
         char[] sArr = S.toCharArray();
 
