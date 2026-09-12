@@ -48,7 +48,7 @@ You don't need to read input or print anything. Your task is to complete the fun
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-12T15:33:40.607Z  
+**Submitted:** 2026-09-12T15:34:45.219Z  
 
 ```java
 import java.time.LocalDate;
