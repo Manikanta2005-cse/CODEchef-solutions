@@ -60,27 +60,24 @@ Output
 
 ## Solution
 
-**Language:** c_cpp  
+**Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-19T16:20:52.611Z  
+**Submitted:** 2026-09-19T16:21:37.580Z  
 
-```c_cpp
-import java.util.HashMap;
-
-class Solution {
-    public int[] findPair(int[] nums, int target) {
-        HashMap<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            int complement = target - nums[i];
-            if (map.containsKey(complement)) {
-                return new int[] { map.get(complement), i };
-            }
-            map.put(nums[i], i);
+```java
+public static int[] findPair(int[] nums, int target) {
+    HashMap<Integer, Integer> map = new HashMap<>();
+    for (int i = 0; i < nums.length; i++) {
+        int complement = target - nums[i];
+        if (map.containsKey(complement)) {
+            return new int[]{map.get(complement), i};
         }
-        return new int[] {};
+        map.put(nums[i], i);
     }
+    return new int[]{}; 
 }
+
 ```
 
 ---
