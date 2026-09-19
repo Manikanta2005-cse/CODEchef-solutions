@@ -25,7 +25,7 @@ Explanation: Distinct pairs with sum equal to 2 is (1, 1).
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-12T16:15:02.424Z  
+**Submitted:** 2026-09-19T16:19:25.713Z  
 
 ```java
 import java.util.HashSet;
