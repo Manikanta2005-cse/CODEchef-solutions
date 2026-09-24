@@ -53,7 +53,7 @@ gacbade
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-24T15:15:23.175Z  
+**Submitted:** 2026-09-24T15:15:44.435Z  
 
 ```java
 import java.util.*;
@@ -81,11 +81,11 @@ class Codechef {
                 start = !start;
             }
         }
-        return new String(t);  // Convert char array to string
+        return new String(t);  
     }
 
     private static boolean isVowel(char c) {
-        return "aeiou".indexOf(c) != -1;  // Check if the character is a vowel
+        return "aeiou".indexOf(c) != -1;  
     }
 
     public static void main(String[] args) {
