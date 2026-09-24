@@ -37,9 +37,9 @@ Output: "bacd"
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 95.94%)  
-**Memory:** 44.7 MB (beats 62.43%)  
-**Submitted:** 2026-09-04T14:51:57.057Z  
+**Runtime:** 1 ms (beats 96.05%)  
+**Memory:** 44.8 MB (beats 61.66%)  
+**Submitted:** 2026-09-24T15:19:56.695Z  
 
 ```java
 class Solution {
