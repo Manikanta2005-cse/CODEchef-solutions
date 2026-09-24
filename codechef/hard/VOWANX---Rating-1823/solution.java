@@ -6,7 +6,7 @@ class Codechef {
     
     public static String rearrangeString(String s) {
         int n = s.length();
-        char[] t = new char[n];  // Initialize the output array
+        char[] t = new char[n]; 
         int l = 0;
         int r = n - 1;
         boolean start = false;
@@ -19,7 +19,7 @@ class Codechef {
                 t[r] = s.charAt(i);
                 r--;
             }
-            if (isVowel(s.charAt(i))) {  // Check if the character is a vowel
+            if (isVowel(s.charAt(i))) {  
                 start = !start;
             }
         }
@@ -32,16 +32,16 @@ class Codechef {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int t = Integer.parseInt(scanner.nextLine());  // First line is the number of test cases
+        int t = Integer.parseInt(scanner.nextLine());  
         StringBuilder results = new StringBuilder();
 
         for (int i = 0; i < t; i++) {
-            int n = Integer.parseInt(scanner.nextLine());  // Read the length of the string (not used directly)
-            String s = scanner.nextLine();  // Read the string
+            int n = Integer.parseInt(scanner.nextLine());  
+            String s = scanner.nextLine();  
             String result = rearrangeString(s);
             results.append(result).append("\n");
         }
-        System.out.print(results.toString());  // Print all results at once
+        System.out.print(results.toString());   
 
         scanner.close();
     }
