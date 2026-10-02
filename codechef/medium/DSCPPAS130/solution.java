@@ -1,34 +1,31 @@
-import java.util.Scanner;
+public static int countOccurrences(int[] arr, int n, int target) {
+    int first = findBound(arr, n, target, true);
+    if (first == -1) {
+        return 0;
+    }
+    int last = findBound(arr, n, target, false);
+    return last - first + 1;
+}
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[] binaryArray = new int[n];
-        for (int i = 0; i < n; i++) {
-            binaryArray[i] = sc.nextInt();
-        }
+private static int findBound(int[] arr, int n, int target, boolean isFirst) {
+    int low = 0, high = n - 1;
+    int result = -1;
 
-        int low = 0;
-        int high = n - 1;
-        int firstOneIndex = -1;
-
-        while (low <= high) {
-            int mid = low + (high - low) / 2;
-            if (binaryArray[mid] == 1) {
-                firstOneIndex = mid;
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        if (arr[mid] == target) {
+            result = mid;
+            if (isFirst) {
                 high = mid - 1;
             } else {
                 low = mid + 1;
             }
-        }
-
-        if (firstOneIndex == -1) {
-            System.out.println(0);
+        } else if (arr[mid] < target) {
+            low = mid + 1;
         } else {
-            System.out.println(n - firstOneIndex);
+            high = mid - 1;
         }
-
-        sc.close();
     }
+
+    return result;
 }
