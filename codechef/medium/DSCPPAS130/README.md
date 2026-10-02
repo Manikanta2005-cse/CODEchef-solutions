@@ -38,7 +38,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-02T16:05:25.098Z  
+**Submitted:** 2026-10-02T16:10:09.916Z  
 
 ```java
 public static int countOccurrences(int[] arr, int n, int target) {
