@@ -4,14 +4,34 @@
 
 ## Problem
 
-_Description not available._
+### Find smallest and largest numbers
+
+Write a program to find the  **smallest**  and  **largest**  elements in an array of integers.
+
+### Input Format
+- The first line contains an integer n, representing the number of elements in the array.
+- The second line contains n integers separated by spaces, representing the elements of the array.
+### Output Format
+- Print the smallest and largest elements in the array on a single line, separated by a space.
+### Sample 1:
+Input
+Output
+
+```
+10
+4 3 53 13 2 44 55 35 56 34
+```
+
+```
+2 56
+```
 
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-03T16:39:57.827Z  
+**Submitted:** 2026-10-03T16:40:37.610Z  
 
 ```java
 import java.util.*;
@@ -21,26 +41,21 @@ import java.io.*;
 class Codechef {
     public static void main (String[] args) throws java.lang.Exception {
         Scanner sc = new Scanner(System.in);
-        if (!sc.hasNext()) return;
+        if (!sc.hasNextInt()) return;
         
-        String s1 = sc.next();
-        char c1 = sc.next().charAt(0);
-        int k = sc.nextInt();
+        int n = sc.nextInt();
+        if (n <= 0) return;
         
-        int count = 0;
-        int ans = -1;
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
         
-        for (int i = 0; i < s1.length(); i++) {
-            if (s1.charAt(i) == c1) {
-                count++;
-                if (count == k) {
-                    ans = i;
-                    break;
-                }
-            }
+        for (int i = 0; i < n; i++) {
+            int num = sc.nextInt();
+            if (num < min) min = num;
+            if (num > max) max = num;
         }
         
-        System.out.println(ans);
+        System.out.println(min + " " + max);
     }
 }
 ```
