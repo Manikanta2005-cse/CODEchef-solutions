@@ -5,25 +5,20 @@ import java.io.*;
 class Codechef {
     public static void main (String[] args) throws java.lang.Exception {
         Scanner sc = new Scanner(System.in);
-        if (!sc.hasNext()) return;
+        if (!sc.hasNextInt()) return;
         
-        String s1 = sc.next();
-        char c1 = sc.next().charAt(0);
-        int k = sc.nextInt();
+        int n = sc.nextInt();
+        if (n <= 0) return;
         
-        int count = 0;
-        int ans = -1;
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
         
-        for (int i = 0; i < s1.length(); i++) {
-            if (s1.charAt(i) == c1) {
-                count++;
-                if (count == k) {
-                    ans = i;
-                    break;
-                }
-            }
+        for (int i = 0; i < n; i++) {
+            int num = sc.nextInt();
+            if (num < min) min = num;
+            if (num > max) max = num;
         }
         
-        System.out.println(ans);
+        System.out.println(min + " " + max);
     }
 }
