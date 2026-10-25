@@ -21,7 +21,7 @@ Now let’s build a small Express API to store and retrieve users’ favorite co
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-25T16:46:29.983Z  
+**Submitted:** 2026-10-25T16:46:34.542Z  
 
 ```cpp
 import type { Request, Response } from "express";
@@ -47,10 +47,6 @@ app.post("/color", (req: Request, res: Response) => {
   res.send(`Favorite color for ${name} saved as ${color}`);
 });
 
-// GET /color/:name
-app.get("/color/:name", (req: Request, res: Response) => {
-  const { name } = req.params;
-  const color = favoriteColors[name];
 ```
 
 ---
