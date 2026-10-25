@@ -20,8 +20,3 @@ app.post("/color", (req: Request, res: Response) => {
   favoriteColors[name] = color;
   res.send(`Favorite color for ${name} saved as ${color}`);
 });
-
-// GET /color/:name
-app.get("/color/:name", (req: Request, res: Response) => {
-  const { name } = req.params;
-  const color = favoriteColors[name];
