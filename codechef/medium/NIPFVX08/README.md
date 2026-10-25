@@ -38,7 +38,7 @@ Complete the `mongoURI` with your own MongoDB atlas connection string to connect
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-25T16:41:32.663Z  
+**Submitted:** 2026-10-25T16:41:49.542Z  
 
 ```cpp
 
