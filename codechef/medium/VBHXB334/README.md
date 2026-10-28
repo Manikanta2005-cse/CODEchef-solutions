@@ -56,7 +56,7 @@ Your task is to integrate the frontend registration flow with the backend API by
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T09:19:20.066Z  
+**Submitted:** 2026-10-28T09:19:21.146Z  
 
 ```cpp
  MONGO_URI=mongodb+srv://CampusPlacement:sylesh@cluster0.zufsvms.mongodb.net/?appName=Cluster0
