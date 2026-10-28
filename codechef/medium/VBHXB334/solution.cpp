@@ -1,0 +1,3 @@
+ MONGO_URI=mongodb+srv://CampusPlacement:sylesh@cluster0.zufsvms.mongodb.net/?appName=Cluster0
+ PORT=8080
+ JWT_SECRET=c2584aab9a576b15dbc6c1a2c4e19cee42779612722e33b1661055c7b3bd2f94cc3d4b12b1c29f666f113e40329170ca4ee5b3d992021e08ecddd6cb3f6529
